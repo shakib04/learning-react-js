@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
 
-const Navbar = ()=>{
+const Navbar = () => {
 
     return (
         <div>
-            <Link to="/create">Create New User</Link> | 
-            <Link to="/userlist">User List</Link> | 
+            <Link to="/new/emp">New Employee</Link> |
+            <Link to="/userlist">User List</Link> |
             <Link to="/postlist"> Post List</Link>
         </div>
     );

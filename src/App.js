@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import { useFetch } from './components/useFetch';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PostList from './components/sir_task_crud/PostList'
+import UserLogin from './components/lab_task/UserLogin';
+import NewEmployee from './components/lab_task/NewEmployee';
 
 function App() {
 
@@ -46,8 +48,9 @@ function App() {
           </div>
         </Route>
         <Route path="/postlist" children={<PostList list={userlist} deleteCallback={deleteuser} />}>
-
         </Route>
+        <Route exact path="/login" children={<UserLogin />}></Route>
+        <Route exact path="/new/emp" children={<NewEmployee />}></Route>
         <Route path='/create'>
           <CreateUser status='add' addNewUser={addUser} />
         </Route>
